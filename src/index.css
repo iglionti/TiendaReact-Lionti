@@ -13,12 +13,6 @@
   --amarillo-energia: #FFD93D;
   --blanco-puro: #FFFFFF;
   --verde-suave: #E8F5E9;
-
-  /* Legacy support */
-  --verde-principal: #00E676;
-  --verde-claro: #00C853;
-  --fondo: #0A0F0A;
-  --texto-oscuro: #FFFFFF;
 }
 
 * {
@@ -39,52 +33,7 @@ body {
   min-height: 100vh;
 }
 
-/* Typography utilities */
-.font-display {
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: 0.05em;
-}
-
-.font-body {
-  font-family: 'DM Sans', sans-serif;
-}
-
-/* Diagonal accent utility */
-.diagonal-accent {
-  position: relative;
-}
-
-.diagonal-accent::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--verde-electrico), var(--verde-intenso));
-  transform: skewX(-20deg);
-  transform-origin: bottom left;
-}
-
-/* Glow effect utility */
-.glow-green {
-  box-shadow: 0 0 20px rgba(0, 230, 118, 0.3);
-}
-
-.glow-green-text {
-  text-shadow: 0 0 10px rgba(0, 230, 118, 0.5);
-}
-
 /* Animation utilities */
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 5px rgba(0, 230, 118, 0.5);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(0, 230, 118, 0.8);
-  }
-}
-
 @keyframes slide-in-left {
   from {
     opacity: 0;
@@ -105,16 +54,4 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* Speed lines background pattern */
-.speed-lines-bg {
-  background-image:
-    repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 10px,
-      rgba(0, 230, 118, 0.03) 10px,
-      rgba(0, 230, 118, 0.03) 20px
-    );
 }

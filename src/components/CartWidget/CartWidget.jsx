@@ -1,6 +1,6 @@
 import './CartWidget.css'
 
-const CartWidget = () => {
+function CartWidget() {
   return (
     <div className="cart-widget">
       <div className="cart-icon-wrapper">

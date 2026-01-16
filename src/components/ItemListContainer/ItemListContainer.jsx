@@ -1,14 +1,7 @@
+import { CATEGORIES } from '../../constants/categories'
 import './ItemListContainer.css'
 
-const ItemListContainer = ({ greeting }) => {
-  const categories = [
-    { icon: 'bi-dribbble', name: 'Fútbol', color: '#00E676' },
-    { icon: 'bi-person-walking', name: 'Running', color: '#00C853' },
-    { icon: 'bi-heart-pulse', name: 'Fitness', color: '#00A844' },
-    { icon: 'bi-water', name: 'Natación', color: '#00E676' },
-    { icon: 'bi-bicycle', name: 'Ciclismo', color: '#00C853' },
-  ]
-
+function ItemListContainer({ greeting }) {
   return (
     <section className="hero-section">
       {/* Speed lines background */}
@@ -39,7 +32,7 @@ const ItemListContainer = ({ greeting }) => {
           {/* Right side - Category cards */}
           <div className="col-lg-6 hero-cards-col">
             <div className="category-grid">
-              {categories.map((cat, index) => (
+              {CATEGORIES.map((cat, index) => (
                 <div
                   key={cat.name}
                   className="category-card"

@@ -1,7 +1,8 @@
 import CartWidget from '../CartWidget/CartWidget'
+import { CATEGORIES } from '../../constants/categories'
 import './NavBar.css'
 
-const NavBar = () => {
+function NavBar() {
   return (
     <header className="navbar-wrapper">
       <nav className="navbar navbar-expand-lg navbar-custom">
@@ -32,36 +33,14 @@ const NavBar = () => {
           {/* Enlaces de navegación */}
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav mx-auto">
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  <i className="bi bi-dribbble me-1"></i>
-                  <span>Fútbol</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  <i className="bi bi-person-walking me-1"></i>
-                  <span>Running</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  <i className="bi bi-heart-pulse me-1"></i>
-                  <span>Fitness</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  <i className="bi bi-water me-1"></i>
-                  <span>Natación</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  <i className="bi bi-bicycle me-1"></i>
-                  <span>Ciclismo</span>
-                </a>
-              </li>
+              {CATEGORIES.map((cat) => (
+                <li key={cat.name} className="nav-item">
+                  <a className="nav-link" href="#">
+                    <i className={`bi ${cat.icon} me-1`}></i>
+                    <span>{cat.name}</span>
+                  </a>
+                </li>
+              ))}
             </ul>
 
             {/* Cart Widget */}
