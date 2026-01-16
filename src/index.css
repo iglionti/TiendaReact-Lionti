@@ -1,0 +1,23 @@
+:root {
+  --verde-principal: #98D8AA;
+  --verde-claro: #C6EBC5;
+  --fondo: #F7F7F7;
+  --texto-oscuro: #2D3436;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--fondo);
+  color: var(--texto-oscuro);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
