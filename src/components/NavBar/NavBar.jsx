@@ -1,3 +1,4 @@
+import { Link, NavLink } from 'react-router-dom'
 import CartWidget from '../CartWidget/CartWidget'
 import { CATEGORIES } from '../../constants/categories'
 import './NavBar.css'
@@ -8,12 +9,12 @@ function NavBar() {
       <nav className="navbar navbar-expand-lg navbar-custom">
         <div className="container">
           {/* Logo / Brand */}
-          <a className="navbar-brand brand-logo" href="#">
+          <Link className="navbar-brand brand-logo" to="/">
             <span className="logo-icon">
               <i className="bi bi-lightning-charge-fill"></i>
             </span>
             <span className="logo-text">HOPPING SA</span>
-          </a>
+          </Link>
 
           {/* Botón hamburguesa para móvil */}
           <button
@@ -34,11 +35,14 @@ function NavBar() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav mx-auto">
               {CATEGORIES.map((cat) => (
-                <li key={cat.name} className="nav-item">
-                  <a className="nav-link" href="#">
+                <li key={cat.id} className="nav-item">
+                  <NavLink
+                    className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+                    to={`/category/${cat.id}`}
+                  >
                     <i className={`bi ${cat.icon} me-1`}></i>
                     <span>{cat.name}</span>
-                  </a>
+                  </NavLink>
                 </li>
               ))}
             </ul>
