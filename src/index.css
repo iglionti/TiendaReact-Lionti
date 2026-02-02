@@ -13,6 +13,10 @@
   --amarillo-energia: #FFD93D;
   --blanco-puro: #FFFFFF;
   --verde-suave: #E8F5E9;
+
+  /* Typography */
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
 }
 
 * {
@@ -53,5 +57,14 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 230, 118, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 230, 118, 0.7), 0 0 30px rgba(0, 230, 118, 0.4);
   }
 }

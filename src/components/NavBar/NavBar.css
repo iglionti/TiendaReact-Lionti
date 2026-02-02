@@ -40,7 +40,7 @@
 }
 
 .logo-text {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: var(--font-display);
   font-size: 1.8rem;
   color: var(--blanco-puro);
   letter-spacing: 0.1em;
@@ -50,7 +50,7 @@
 .nav-link {
   position: relative;
   color: var(--blanco-puro) !important;
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.95rem;
   padding: 10px 18px !important;
