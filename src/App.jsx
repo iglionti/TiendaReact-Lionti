@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
@@ -12,7 +12,8 @@ function App() {
         <Route path="/" element={<ItemListContainer greeting="¡Bienvenidos a Hopping SA!" />} />
         <Route path="/category/:categoryId" element={<ItemListContainer greeting="¡Bienvenidos a Hopping SA!" />} />
         <Route path="/item/:id" element={<ItemDetailContainer />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/ruta-invalida" element={<NotFound />} />
+        <Route path="*" element={<Navigate to="/ruta-invalida" replace />} />
       </Routes>
     </>
   )
