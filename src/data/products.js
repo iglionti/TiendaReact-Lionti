@@ -76,7 +76,7 @@ export const products = [
     title: 'Casco de Ciclismo Aerodinámico',
     description: 'Casco ultraliviano con ventilación optimizada y certificación de seguridad. Sistema de ajuste micro-métrico.',
     price: 75000,
-    pictureUrl: 'https://images.unsplash.com/photo-1557803175-2f8c4c4c6f1a?w=400',
+    pictureUrl: 'https://images.unsplash.com/photo-1541625602330-2277a4c46182?w=400',
     category: 'ciclismo',
     stock: 9
   },
